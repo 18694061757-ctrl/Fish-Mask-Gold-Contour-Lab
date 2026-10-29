@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@keyframes photo-scan-shake {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  12% {
+    transform: translate3d(0, -7px, 0) scale(1.018);
+  }
+  24% {
+    transform: translate3d(-3px, 5px, 0) scale(0.994) rotate(-0.25deg);
+  }
+  38% {
+    transform: translate3d(3px, -4px, 0) scale(1.012) rotate(0.2deg);
+  }
+  52% {
+    transform: translate3d(-1.5px, 3px, 0) scale(0.997) rotate(-0.12deg);
+  }
+  66% {
+    transform: translate3d(1.5px, -2px, 0) scale(1.004) rotate(0.06deg);
+  }
+  80% {
+    transform: translate3d(-0.5px, 1px, 0) scale(0.999);
+  }
+  92% {
+    transform: translate3d(0.5px, -0.5px, 0) scale(1.001);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-photo-shake {
+  animation: photo-scan-shake 0.88s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform;
+}
